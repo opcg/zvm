@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+
+# Wip working through a complex shared linux env
+
+{{ rez_env }} $argv
+
+# Invoke the unified shell environment
+csh_env
+
+setenv REZ2_DEFAULT_VERSION 2.18.0
+
+rez2
+
+unsetenv REZ_LOCK_PACKAGES_PATH
+setenv REZ_VERSION 2.18.0
+setenv REZ2_DEFAULT_VERSION 2.18.0
+
+#source $REL_BOOT_DIR/rez/init.csh
+
+if (! $?REZ_LOCK_PACKAGES_PATH) then
+    unsetenv REZ_LOCAL_PACKAGES_PATH
+    unsetenv REZ_RELEASE_PACKAGES_PATH
+    unsetenv REZ_PACKAGES_PATH
+endif
+
+# TODO: Iterate and delete all rez env vars except REZ_VERSION
+# Try to avoid a hardcoded list of env vars.
+unsetenv REZ_PLATFORM
+unsetenv REZ_PATH
+unsetenv REZ_EGG_PACKAGES_PATH
+unsetenv REZ_DOT_IMAGE_VIEWER
+unsetenv REZ_RELEASE_EDITOR
+unsetenv REZ_CONFIG_FILE
+setenv PATH `echo $PATH | tr ':' '\n' | grep -v /rel/third_party/rez | tr '\n' ':'`
+
+# Always default to rez-1.7 for backwards compatibility
+if (! $?REZ_VERSION) then
+    setenv REZ_VERSION 1.7.0
+endif
+
+# Set aliases respecting the user's rez version override
+if (! $?REZ2_DEFAULT_VERSION) then
+    setenv REZ2_DEFAULT_VERSION 2.17.0
+endif
+alias rez2 'setenv REZ_VERSION $REZ2_DEFAULT_VERSION; unsetenv REZ_LOCK_PACKAGES_PATH; source $REL_BOOT_DIR/rez/init.csh'
+alias rez1 'setenv REZ_VERSION 1.7.0; unsetenv REZ_LOCK_PACKAGES_PATH; source $REL_BOOT_DIR/rez/init.csh'
+
+if ( $#argv < 1 ) then
+    source "$REL_BOOT_DIR/rez/config/$REZ_VERSION/config_default.csh"
+else if ( -f "$1" ) then
+    source "$1"
+else if ( -f "$REL_BOOT_DIR/rez/config/$REZ_VERSION/config_${1}.csh" ) then
+    source "$REL_BOOT_DIR/rez/config/$REZ_VERSION/config_${1}.csh"
+else
+    source "$REL_BOOT_DIR/rez/config/$REZ_VERSION/config_default.csh"
+endif
+
+setenv REZ_RELEASE_PACKAGES_PATH {{ rez_release_path }}
+setenv REZ_LOCK_PACKAGES_PATH 1
+setenv REZ_LOCAL_PACKAGES_PATH ~/rez/latest
+setenv REZ_VERSION 2.18.0
+
+setenv REZ_PACKAGES_PATH ~/rez/packages/latest:~/rez/packages/stable:~/rez/packages/external:{{ rez_external }}:{{ rez_latest }}:{{ rez_stable }}:{{ rez_other }}:{{ rez_thirdparty }}:{{ rez_python }}
+setenv REZ2_DEFAULT_VERSION 2.18.0
+
+#setenv REZ_PLATFORM Linux
+#setenv REZ_PATH {{ rez_version_packages }}
+#setenv REZ_EGG_PACKAGES_PATH /rel/packages
+#setenv REZ_DOT_IMAGE_VIEWER /usr/bin/eog
+
+setenv REZ_RELEASE_EDITOR vi
+
+# DOES NOT WORK IN OUR ENV...
+#setenv REZ_CONFIG_FILE {{ rez_linux_config }}
+
+# overrides for LINUX REZ_CONFIG_FILE
+
+setenv REZ_MEMCACHED_URI {{ rez_memcached }}
+setenv REZ_PACKAGE_DEFINITION_BUILD_PYTHON_PATHS {{ rez_common }}
+setenv REZ_PACKAGE_PREPROCESS_FUNCTION build.prepare_for_release
+
+# for testing...
+#setenv REZ_DEBUG_ALL true
+#setenv REZ_ERROR_OLD_COMMANDS true
+#PACKAGE_COMMANDS_SOURCED_FIRST: false ???
+#VARIANT_SELECT_MODE: (may want to change ???)
+
+
+#printenv | grep REZ

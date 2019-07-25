@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+REZ_SCRIPTS_VERSION={{ version }}

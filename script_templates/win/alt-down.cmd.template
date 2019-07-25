@@ -1,0 +1,12 @@
+@ECHO OFF
+
+setlocal
+
+echo.Backup Alt Contents
+
+if not defined REZ_DEV_PACKAGES_REMOTE set REZ_DEV_PACKAGES_REMOTE={{ remote }}
+
+if not defined REZ_SCRIPTS_VERSION call %~dp0_configure-rez-scripts.cmd
+call %~dp0_configure-alt.cmd
+
+if exist %REZ_DEV_PACKAGES_REMOTE% robocopy %REZ_DEV_PACKAGES_REMOTE% %REZ_DEV_PACKAGES% /MIR

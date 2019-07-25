@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ -z "${REZ_SCRIPTS_ROOT+xxx}" ]; then
+ REZ_SCRIPTS_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+ source ${REZ_SCRIPTS_ROOT}/_configure-rez-scripts.sh ${REZ_SCRIPTS_ROOT};
+fi
+
+${REZ_LOCATION}/rez-interpret "$@"

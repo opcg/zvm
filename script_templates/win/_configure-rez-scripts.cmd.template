@@ -1,0 +1,35 @@
+:: set REZ_SCRIPTS_VERSION=2.27.0
+call _rez_version.cmd
+
+call :NORMALIZEPATH %~dp0..\..
+set _REZ_ROOT=%_RETVAL%
+set REZ_LOCATION=%_REZ_ROOT%\versions\%REZ_SCRIPTS_VERSION%\Scripts\rez
+
+echo.Using Rez @ %REZ_LOCATION%
+
+set __CENTRAL_CONFIG={{ central_config }}
+
+if defined REZ_CONFIG_FILE (
+    if exist %__CENTRAL_CONFIG% set REZ_CONFIG_FILE=%__CENTRAL_CONFIG%;%REZ_CONFIG_FILE%
+)
+
+if not defined REZ_CONFIG_FILE (
+    if exist %__CENTRAL_CONFIG% set REZ_CONFIG_FILE=%__CENTRAL_CONFIG%
+    if not exist %__CENTRAL_CONFIG% set REZ_CONFIG_FILE=%_REZ_ROOT%\configs\baseconfig_win.py
+)
+
+set REZ_CONFIG_FILE=%REZ_CONFIG_FILE%;%_REZ_ROOT%\configs\rezconfig.py
+
+echo.Using Rez Configs %REZ_CONFIG_FILE%
+
+if not defined REZ_LOCAL_CONFIGS if exist %_REZ_ROOT%\configs set REZ_LOCAL_CONFIGS=%_REZ_ROOT%\configs
+
+if not defined GRAPHVIZ_LOCATION if exist %_REZ_ROOT%\extras\graphviz set GRAPHVIZ_LOCATION=%_REZ_ROOT%\extras\graphviz
+if defined GRAPHVIZ_LOCATION if exist %GRAPHVIZ_LOCATION%\bin set PATH=%PATH%;%GRAPHVIZ_LOCATION%\bin
+
+GOTO :EOF
+:: ========== FUNCTIONS ==========
+
+:NORMALIZEPATH
+  SET _RETVAL=%~dpfn1
+  EXIT /B

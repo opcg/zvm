@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e8471fb-abb4-4478-9789-0c629a09f286" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/install/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/__misc.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/_configure-alt.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/_configure-rez-scripts.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/_rez_version.sh.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/fxd-config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/nix/fxd-release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/_configure-alt.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/_configure-rez-scripts.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/_rez_version.sh.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/alt-config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/osx/alt-release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/_configure-alt.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/_configure-rez-scripts.cmd.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt-build.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt-config.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt-down.cmd.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt-env.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt-up.cmd.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_templates/win/alt.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/_rez-complete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/_rez_fwd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/bez" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-bind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-context" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-depends" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-diff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-help" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-interpret" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-memcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-plugins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-python" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-search" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-selftest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-stable" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-status" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-suite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-view" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rez-yaml2py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/nix/rezolve" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/_rez-complete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/_rez_fwd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/bez" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-bind" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-context" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-depends" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-diff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-help" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-interpret" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-memcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-plugins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-python" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-search" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-selftest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-stable" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-status" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-suite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-view" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rez-yaml2py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/osx/rezolve" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/_rez-complete.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/_rez_fwd.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/bez.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-bind.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-build.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-config.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-context.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-depends.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-diff.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-env.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-gui.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-help.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-interpret.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-memcache.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-pip.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-plugins.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-python.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-release.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-search.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-selftest.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-stable.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-status.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-suite.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-test.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-view.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez-yaml2py.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rez.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/win/rezolve.cmd" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-bind">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-build">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-context">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-diff">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-memcache">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/nix/rez-test">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_templates/nix/_rez_version.sh.template">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_templates/nix/_configure-rez-scripts.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_templates/nix/_configure-alt.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/script_templates/nix/alt-config">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/install/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/script_templates/osx/_rez_version.sh.template" />
+        <option value="$PROJECT_DIR$/script_templates/osx/alt-config" />
+        <option value="$PROJECT_DIR$/script_templates/osx/alt-release" />
+        <option value="$PROJECT_DIR$/script_templates/win/_configure-rez-scripts.cmd.template" />
+        <option value="$PROJECT_DIR$/script_templates/win/fxd.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/fxd-build.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/fxd-config.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/fxd-down.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/alt-down.cmd.template" />
+        <option value="$PROJECT_DIR$/script_templates/win/fxd-env.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/alt-up.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/win/alt-up.cmd.template" />
+        <option value="$PROJECT_DIR$/script_templates/win/_configure-alt.cmd" />
+        <option value="$PROJECT_DIR$/script_templates/nix/_rez_version.sh.template" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="714" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+              <item name="script_templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+              <item name="script_templates" type="462c0819:PsiDirectoryNode" />
+              <item name="nix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+              <item name="script_templates" type="462c0819:PsiDirectoryNode" />
+              <item name="osx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zvm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zvm" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts/nix" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/script_templates/nix" />
+      <recent name="$PROJECT_DIR$/script_templates/osx" />
+      <recent name="$PROJECT_DIR$/script_templates/win" />
+      <recent name="$PROJECT_DIR$/script_templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/nix" />
+      <recent name="$PROJECT_DIR$/script_templates/osx" />
+      <recent name="$PROJECT_DIR$/scripts/win" />
+      <recent name="$PROJECT_DIR$/scripts/osx" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e8471fb-abb4-4478-9789-0c629a09f286" name="Default Changelist" comment="" />
+      <created>1564065529559</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564065529559</updated>
+      <workItem from="1564065535929" duration="1421000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1421000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/install/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/osx/_rez_version.sh.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/osx/_configure-alt.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/osx/alt-config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/osx/alt-release">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/osx/_configure-rez-scripts.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/_configure-rez-scripts.cmd.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt-down.cmd.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt-config.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt-build.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt-up.cmd.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="76" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-build.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-env.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-config.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-release.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-stbenv.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/fxz-up.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/alt-env.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/win/_configure-alt.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/nix/__misc.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-bind">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-build">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-context">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-diff">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-memcache">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/nix/rez-test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/nix/_rez_version.sh.template">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/nix/_configure-rez-scripts.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/nix/_configure-alt.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_templates/nix/alt-config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

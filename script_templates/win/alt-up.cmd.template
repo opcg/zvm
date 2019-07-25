@@ -1,0 +1,14 @@
+@ECHO OFF
+
+setlocal
+
+echo.Backup Dev Package Contents
+
+if not defined REZ_DEV_PACKAGES_REMOTE set REZ_DEV_PACKAGES_REMOTE={{ remote }}
+
+set DEV_UPDATE_PACKAGE=%REZ_DEV_PACKAGES%\dev
+set DEV_UPDATE_REMOTE=%REZ_DEV_PACKAGES_REMOTE%\dev
+
+echo.Updating Packages @ %DEV_UPDATE_REMOTE%
+
+if exist %REZ_DEV_PACKAGES_REMOTE% robocopy %DEV_UPDATE_PACKAGE% %DEV_UPDATE_REMOTE% /MIR /R:0 /W:0 /XF *.pyc /XD platform-osx /XD platform-linux
