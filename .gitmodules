@@ -1,0 +1,3 @@
+[submodule "2.38.2"]
+	path = versions/2.38.2
+	url = https://github.com/nerdvegas/rez.git
